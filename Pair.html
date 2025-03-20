@@ -1,0 +1,92 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pairing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .code-input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            width: 100%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>ZEROX MD Pairing</h1>
+    <p>To connect to the bot, scan the QR code or enter your pairing code below:</p>
+    
+    <!-- QR Code or Pairing Code Section -->
+    <div id="qr-section">
+        <p>Scan this QR code to pair with the WhatsApp Bot:</p>
+        <img src="https://via.placeholder.com/200" alt="QR Code" />
+    </div>
+
+    <p>Or, enter your pairing code:</p>
+    <input type="text" id="pairingCode" class="code-input" placeholder="Enter Pairing Code" />
+
+    <br>
+    <button class="btn" onclick="pairWithBot()">Pair with Bot</button>
+    
+    <div id="status" style="margin-top: 20px;"></div>
+</div>
+
+<script>
+    function pairWithBot() {
+        const pairingCode = document.getElementById("pairingCode").value;
+        
+        if (pairingCode === "") {
+            alert("Please enter a pairing code!");
+        } else {
+            // Simulate pairing process
+            document.getElementById("status").innerText = "Pairing with bot... Please wait.";
+            
+            // Simulate bot connection (Replace this with actual bot logic)
+            setTimeout(() => { document.getElementById("status").innerText = "Successfully paired with the bot!";
+            }, 2000);
+        }
+    }
+</script>
+
+</body>
+</html>
+```
